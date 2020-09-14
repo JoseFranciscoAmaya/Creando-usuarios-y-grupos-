@@ -1,0 +1,213 @@
+1)	 // Estamos en modo de usuario habrá que entrar a modo súper usuario
+2)	frankamaya@debian:~$
+3)	frankamaya@debian:~$ su
+4)	//Contraseña:
+5)	//Estamos en modo SuperUsuario o Administrador
+6)	 root@debian:/home/frankamaya#
+7)	 root@debian:/home/frankamaya# su -
+            root@debian:~#
+8)	//Procedemos a Crear el Grupo Casa
+9)	root@debian:~# groupadd casa
+10)	Verificamos si el grupo casa se creo
+11)	root@debian:~# cat /etc/group
+12)	root:x:0:
+13)	daemon:x:1:
+14)	bin:x:2:
+15)	sys:x:3:
+16)	adm:x:4:
+17)	tty:x:5:
+18)	disk:x:6:
+19)	lp:x:7:
+20)	mail:x:8:
+21)	news:x:9:
+22)	uucp:x:10:
+23)	man:x:12:
+24)	proxy:x:13:
+25)	kmem:x:15:
+26)	dialout:x:20:
+27)	fax:x:21:
+28)	voice:x:22:
+29)	cdrom:x:24:frankamaya
+30)	floppy:x:25:frankamaya
+31)	tape:x:26:
+32)	sudo:x:27:
+33)	audio:x:29:pulse,frankamaya
+34)	dip:x:30:frankamaya
+35)	www-data:x:33:
+36)	backup:x:34:
+37)	operator:x:37:
+38)	list:x:38:
+39)	irc:x:39:
+40)	src:x:40:
+41)	gnats:x:41:
+42)	shadow:x:42:
+43)	utmp:x:43:
+44)	video:x:44:frankamaya
+45)	sasl:x:45:
+46)	plugdev:x:46:frankamaya
+47)	staff:x:50:
+48)	games:x:60:
+49)	users:x:100:
+50)	nogroup:x:65534:
+51)	systemd-journal:x:101:
+52)	systemd-timesync:x:102:
+53)	systemd-network:x:103:
+54)	systemd-resolve:x:104:
+55)	systemd-bus-proxy:x:105:
+56)	input:x:106:
+57)	crontab:x:107:
+58)	netdev:x:108:frankamaya
+59)	ssl-cert:x:109:
+60)	avahi-autoipd:x:110:
+61)	messagebus:x:111:
+62)	ssh:x:112:
+63)	bluetooth:x:113:frankamaya
+64)	lpadmin:x:114:frankamaya
+65)	geoclue:x:115:
+66)	rtkit:x:116:
+67)	pulse:x:117:
+68)	pulse-access:x:118:
+69)	scanner:x:119:saned,frankamaya
+70)	avahi:x:120:
+71)	colord:x:121:
+72)	saned:x:122:
+73)	Debian-gdm:x:123:
+74)	frankamaya:x:1000:
+75)	ftp:x:124:
+76)	Debian-exim:x:125:
+77)	casa:x:1001:
+78)	// El Grupo se creo exitosamente//////////////////////
+79)	//AHORA VAMOS A PROCEDER A CREAR EL USUARIO MERCEDES EL CUAL ES EL NOMBRE DE MI MAMA. Y EL SEGUNDO USUARIO SERA MI PRIMER NOMBRE.///////////////////////////////////////////////
+80)	root@debian:~# useradd mercedes
+81)	root@debian:~# useradd jose
+82)	VAMOS A VERIFICAR SI LOS USUARIOS FUERON CREADOS CORRECTAMENTE.///////////////////////////////////////////
+83)	root@debian:~# cat /etc/passwd
+84)	root:x:0:0:root:/root:/bin/bash
+85)	daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+86)	bin:x:2:2:bin:/bin:/usr/sbin/nologin
+87)	sys:x:3:3:sys:/dev:/usr/sbin/nologin
+88)	sync:x:4:65534:sync:/bin:/bin/sync
+89)	games:x:5:60:games:/usr/games:/usr/sbin/nologin
+90)	man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+91)	lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+92)	mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+93)	news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+94)	uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+95)	proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+96)	www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+97)	backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+98)	list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+99)	irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+100)	gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+101)	nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+102)	systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+103)	systemd-network:x:101:103:systemd Network      Management,,,:/run/systemd/netif:/bin/false
+104)	systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+105)	systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+106)	_apt:x:104:65534::/nonexistent:/bin/false
+107)	dnsmasq:x:105:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+108)	avahi-autoipd:x:106:110:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+109)	messagebus:x:107:111::/var/run/dbus:/bin/false
+110)	          usbmux:x:108:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+111)	          geoclue:x:109:115::/var/lib/geoclue:/bin/false
+112)	          speech-dispatcher:x:110:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+113)	          rtkit:x:111:116:RealtimeKit,,,:/proc:/bin/false
+114)	          pulse:x:112:117:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+115)	          avahi:x:113:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+116)	          colord:x:114:121:colord colour management daemon,,,:/var/lib/colord:/bin/false
+117)	          saned:x:115:122::/var/lib/saned:/bin/false
+118)	          Debian-gdm:x:116:123:Gnome Display Manager:/var/lib/gdm3:/bin/false
+119)	          hplip:x:117:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+120)	frankamaya:x:1000:1000:FrankAmaya,,,:/home/frankamaya:/bin/bash
+121)	ftp:x:118:124:ftp daemon,,,:/srv/ftp:/bin/false
+122)	Debian-exim:x:119:125::/var/spool/exim4:/bin/false
+123)	COMO PODEMOS VERIFICAR QUE LOS DOS USUARIOS FUERON CREADOS CORRECTAMENTE./////////////////////////
+124)	mercedes:x:1001:1002::/home/mercedes:
+125)	jose:x:1002:1003::/home/jose:
+126)	AHORA VAMOS AGREGAR EL USUARIO MERCEDES AL GRUPO CASA.//////////////////////////////////////////////////////
+127)	root@debian:~# adduser mercedes casa
+128)	Añadiendo al usuario `mercedes' al grupo `casa' ...
+129)	Añadiendo al usuario mercedes al grupo casa
+130)	Hecho.
+131)	EL USUARIO FUE AGREGADO CORRECTAMENTE
+132)	DE LA MISMA MANERA PROCEDO A AGREGAR EL USUARIO JOSE AL GRUPO CASA.///////////////////////////////////////////
+133)	root@debian:~# adduser jose casa
+134)	Añadiendo al usuario `jose' al grupo `casa' ...
+135)	Añadiendo al usuario jose al grupo casa
+136)	Hecho.
+137)	/////////////////////VERIFICAMOS QUE USUARIO FUE AGREGADO////////////// EXITOSAMENTE.///////////////////////////////////////////////////////////
+138)	/////////////AHORA VAMOS A CAMBIAR EL NOMBRE DEL GRUPO CASA POR EL NOMBRE FAMILIA.////////////////////////////
+139)	root@debian:~# groupmod -n Familia casa
+140)	///////AHORA VAMOS A REVISAR SI LOS CAMBIOS SE EFECTUARON………….////////
+141)	root@debian:~# cat /etc/group
+142)	root:x:0:
+143)	daemon:x:1:
+144)	bin:x:2:
+145)	sys:x:3:
+146)	adm:x:4:
+147)	tty:x:5:
+148)	disk:x:6:
+149)	lp:x:7:
+150)	mail:x:8:
+151)	news:x:9:
+152)	uucp:x:10:
+153)	man:x:12:
+154)	proxy:x:13:
+155)	kmem:x:15:
+156)	dialout:x:20:
+157)	fax:x:21:
+158)	voice:x:22:
+159)	cdrom:x:24:frankamaya
+160)	floppy:x:25:frankamaya
+161)	tape:x:26:
+162)	sudo:x:27:
+163)	audio:x:29:pulse,frankamaya
+164)	dip:x:30:frankamaya
+165)	www-data:x:33:
+166)	backup:x:34:
+167)	operator:x:37:
+168)	list:x:38:
+169)	irc:x:39:
+170)	src:x:40:
+171)	gnats:x:41:
+172)	shadow:x:42:
+173)	utmp:x:43:
+174)	video:x:44:frankamaya
+175)	sasl:x:45:
+176)	plugdev:x:46:frankamaya
+177)	staff:x:50:
+178)	games:x:60:
+179)	users:x:100:
+180)	nogroup:x:65534:
+181)	systemd-journal:x:101:
+182)	systemd-timesync:x:102:
+183)	systemd-network:x:103:
+184)	systemd-resolve:x:104:
+185)	systemd-bus-proxy:x:105:
+186)	input:x:106:
+187)	crontab:x:107:
+188)	netdev:x:108:frankamaya
+189)	ssl-cert:x:109:
+190)	avahi-autoipd:x:110:
+191)	messagebus:x:111:
+192)	ssh:x:112:
+193)	bluetooth:x:113:frankamaya
+194)	lpadmin:x:114:frankamaya
+195)	geoclue:x:115:
+196)	rtkit:x:116:
+197)	pulse:x:117:
+198)	pulse-access:x:118:
+199)	scanner:x:119:saned,frankamaya
+200)	avahi:x:120:
+201)	colord:x:121:
+202)	saned:x:122:
+203)	Debian-gdm:x:123:
+204)	frankamaya:x:1000:
+205)	ftp:x:124:
+206)	Debian-exim:x:125:
+207)	mercedes:x:1002:
+208)	jose:x:1003:
+209)	//COMO PODEMOS OBSERVAR LOS CAMBIOS SE EFECTUARON CORRECTAMENTE./////////////
+210)	VERIFICAMOS QUE LOS CAMBIOS FUERON EXITOSOS Y QUE LOS USUARIOS MERCEDES Y JOSE FORMAN PARTE DE ESTE GRUPO.
+211)	Familia:x:1001:mercedes,jose
+212)	root@debian:~#
